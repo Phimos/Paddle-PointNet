@@ -7,7 +7,7 @@ from paddle.metric import Accuracy
 from paddle.optimizer import Adam
 from paddle.optimizer.lr import StepDecay
 
-from ddata import ModelNetDataset
+from data import ModelNetDataset
 from model import CrossEntropyMatrixRegularization, PointNetClassifier
 
 
@@ -63,7 +63,6 @@ def train(args):
     )
     loss_fn = CrossEntropyMatrixRegularization()
     metrics = Accuracy()
-
 
     best_test_acc = 0
     for epoch in range(args.max_epochs):

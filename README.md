@@ -18,7 +18,12 @@
 ## Usage
 
 ### Data Preparation
-Download [alignment ModelNet](https://shapenet.cs.stanford.edu/media/modelnet40_normal_resampled.zip) and save in `data/modelnet40_normal_resampled/`. The same dataset as the PyTorch version implementation.
+Download [alignment ModelNet](https://shapenet.cs.stanford.edu/media/modelnet40_normal_resampled.zip) and save in `modelnet40_normal_resampled/`. The same dataset as the PyTorch version implementation.
+
+```
+wget https://shapenet.cs.stanford.edu/media/modelnet40_normal_resampled.zip
+unzip modelnet40_normal_resampled.zip
+```
 
 ### Train
 ```
