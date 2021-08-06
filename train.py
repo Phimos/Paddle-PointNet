@@ -26,6 +26,7 @@ def parse_args():
     parser.add_argument("--weight_decay", type=float, default=1e-4, help="weight decay")
     parser.add_argument("--log_freq", type=int, default=1)
     parser.add_argument("--verbose", type=int, default=1)
+    parser.add_argument("--model_path", type=str, default="pointnet.pdparams")
     # parser.add_argument("--data_dir", type=str, default="/data3/ganyunchong/ModelNet40")
     parser.add_argument(
         "--data_dir",
@@ -101,7 +102,7 @@ def train(args):
 
         if test_acc > best_test_acc:
             best_test_acc = test_acc
-            paddle.save(model.state_dict(), "pointnet.pdparams")
+            paddle.save(model.state_dict(), args.model_path)
             print("Model saved. Best Test ACC: {}".format(test_acc))
         else:
             print("Model not saved. Current Best Test ACC: {}".format(best_test_acc))
