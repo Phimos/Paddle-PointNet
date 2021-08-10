@@ -40,18 +40,17 @@ Classification result on ModelNet40
 
 > The goal of Princeton ModelNet project is to provide researchers in computer vision, computer graphics, robotics and cognitive science, with a comprehensive clean collection of 3D CAD models for objects.
 
-* Dataset size:
-  * Train: 9843
-  * Test: 2468
-* Dataset format:
-  * CAD models in [Object File Format](https://segeval.cs.princeton.edu/public/off_format.html)
-
+- Dataset size:
+  - Train: 9843
+  - Test: 2468
+- Dataset format:
+  - CAD models in [Object File Format](https://segeval.cs.princeton.edu/public/off_format.html)
 
 ## 4. Environment
 
 - Hardware: GPU/CPU
 - Framework:
-  - PaddlePaddle >= 2.1.0
+  - PaddlePaddle >= 2.1.2
 
 ## 5. Quick Start
 
@@ -87,7 +86,7 @@ For other information about the model, please refer to the following table:
 | ----------------- | ---------------------------------------- |
 | Author            | Yunchong Gan                             |
 | Date              | 2021.8                                   |
-| Framework version | Paddle 2.1.0                             |
+| Framework version | Paddle 2.1.2                             |
 | Support hardware  | GPU/CPU                                  |
 | Download link     | [pointnet.pdparams](./pointnet.pdparams) |
 | Online operation  | Notebook will be avalible soon           |
