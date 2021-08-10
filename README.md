@@ -20,7 +20,7 @@ This project reproduces PointNet based on paddlepaddle framework.
 - [TensorFlow (Official)](https://github.com/charlesq34/pointnet)
 - [PyTorch](https://github.com/yanx27/Pointnet_Pointnet2_pytorch)
 
-### Metric
+**Acceptance condition**
 
 - Classification Accuracy 89.2 on ModelNet40 Dataset
 
@@ -35,6 +35,17 @@ Classification result on ModelNet40
 | PointNet (PaddlePaddle) | 89.4     |
 
 ## 3. Dataset
+
+### [ModelNet40](https://modelnet.cs.princeton.edu)
+
+> The goal of Princeton ModelNet project is to provide researchers in computer vision, computer graphics, robotics and cognitive science, with a comprehensive clean collection of 3D CAD models for objects.
+
+* Dataset size:
+  * Train: 9843
+  * Test: 2468
+* Dataset format:
+  * CAD models in [Object File Format](https://segeval.cs.princeton.edu/public/off_format.html)
+
 
 ## 4. Environment
 
