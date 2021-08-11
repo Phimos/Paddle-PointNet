@@ -1,6 +1,6 @@
 # Paddle-PointNet
 
-_Use PaddlePaddle to implementate PointNet (Classifier Only)_
+_Use PaddlePaddle to implement PointNet (Classifier Only)_
 
 
 ## 1. Introduction
