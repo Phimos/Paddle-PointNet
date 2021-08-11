@@ -27,10 +27,10 @@ def parse_args():
     parser.add_argument("--log_freq", type=int, default=1)
     parser.add_argument("--verbose", type=int, default=1)
     parser.add_argument("--model_path", type=str, default="pointnet.pdparams")
+    parser.add_argument("--lr_decay_step", type=int, default=20)
+    parser.add_argument("--lr_decay_gamma", type=float, default=0.7)
     parser.add_argument(
-        "--data_dir",
-        type=str,
-        default="modelnet40_normal_resampled",
+        "--data_dir", type=str, default="modelnet40_normal_resampled",
     )
 
     return parser.parse_args()
@@ -54,7 +54,11 @@ def train(args):
 
     model = PointNetClassifier()
 
-    scheduler = StepDecay(learning_rate=args.learning_rate, step_size=20, gamma=0.7)
+    scheduler = StepDecay(
+        learning_rate=args.learning_rate,
+        step_size=args.lr_decay_step,
+        gamma=args.lr_decay_gamma,
+    )
     optimizer = Adam(
         learning_rate=scheduler,
         parameters=model.parameters(),

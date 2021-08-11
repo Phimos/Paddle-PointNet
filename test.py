@@ -28,9 +28,7 @@ def parse_args():
     parser.add_argument("--verbose", type=int, default=1)
     parser.add_argument("--model_path", type=str, default="pointnet.pdparams")
     parser.add_argument(
-        "--data_dir",
-        type=str,
-        default="modelnet40_normal_resampled",
+        "--data_dir", type=str, default="modelnet40_normal_resampled",
     )
 
     return parser.parse_args()
