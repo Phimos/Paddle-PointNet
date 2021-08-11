@@ -2,11 +2,12 @@
 
 _Use PaddlePaddle to implementate PointNet (Classifier Only)_
 
-_Readme is not finished yet ..._
 
 ## 1. Introduction
 
 This project reproduces PointNet based on paddlepaddle framework.
+
+PointNet provides a unified architecture for applications ranging from object classification, part segmentation, to scene semantic parsing. Though simple, PointNet is highly efficient and effective.
 
 **Paper:** [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](https://arxiv.org/pdf/1612.00593.pdf)
 
@@ -78,6 +79,34 @@ python test.py
 ```
 
 ## 6. Details
+
+### Project Structure
+```
+├── README.md
+├── arch.png
+├── data.py
+├── model.py
+├── pointnet.pdparams
+├── requirements.txt
+├── test.py
+├── train.log
+└── train.py
+```
+
+### Train & Test Parameters Description:
+| Name           | Type  | Default                       | Description                         |
+| -------------- | ----- | ----------------------------- | ----------------------------------- |
+| data_dir       | str   | "modelnet40_normal_resampled" | train & test data dir               |
+| num_point      | int   | 1024                          | sample number of points             |
+| batch_size     | int   | 32                            | batch size in training              |
+| num_category   | int   | 40                            | ModelNet10/40                       |
+| learning_rate  | float | 1e-3                          | learning rate in training           |
+| max_epochs     | int   | 200                           | max epochs in training              |
+| num_workers    | int   | 32                            | number of workers in dataloader     |
+| log_batch_num  | int   | 50                            | log info per log_batch_num          |
+| model_path     | str   | "pointnet.pdparams"           | save/load model in training/testing |
+| lr_decay_step  | int   | 20                            | step_size in StepDecay              |
+| lr_decay_gamma | float | 0.7                           | gamma in StepDecay                  |
 
 ## 7. Model Information
 

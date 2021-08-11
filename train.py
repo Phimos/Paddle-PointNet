@@ -24,8 +24,7 @@ def parse_args():
     parser.add_argument("--max_epochs", type=int, default=200, help="max epochs")
     parser.add_argument("--num_workers", type=int, default=32, help="num wrokers")
     parser.add_argument("--weight_decay", type=float, default=1e-4, help="weight decay")
-    parser.add_argument("--log_freq", type=int, default=1)
-    parser.add_argument("--verbose", type=int, default=1)
+    parser.add_argument("--log_batch_num", type=int, default=50)
     parser.add_argument("--model_path", type=str, default="pointnet.pdparams")
     parser.add_argument("--lr_decay_step", type=int, default=20)
     parser.add_argument("--lr_decay_gamma", type=float, default=0.7)
@@ -81,7 +80,7 @@ def train(args):
             metrics.update(correct)
             loss.backward()
 
-            if (batch_id + 1) % 50 == 0:
+            if (batch_id + 1) % args.log_batch_num == 0:
                 print(
                     "Epoch: {}, Batch ID: {}, Loss: {}, ACC: {}".format(
                         epoch, batch_id + 1, loss.item(), metrics.accumulate()
