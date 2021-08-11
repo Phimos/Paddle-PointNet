@@ -185,11 +185,11 @@ A regularization loss (with weight 0.001) is added to the softmax classification
 ## 7. Model Information
 
 For other information about the model, please refer to the following table:
-| Information       | Description                              |
-| ----------------- | ---------------------------------------- |
-| Author            | Yunchong Gan                             |
-| Date              | 2021.8                                   |
-| Framework version | Paddle 2.1.2                             |
-| Support hardware  | GPU/CPU                                  |
-| Download link     | [pointnet.pdparams](./pointnet.pdparams) |
-| Online operation  | Notebook will be avalible soon           |
+| Information       | Description                                                           |
+| ----------------- | --------------------------------------------------------------------- |
+| Author            | Yunchong Gan                                                          |
+| Date              | 2021.8                                                                |
+| Framework version | Paddle 2.1.2                                                          |
+| Support hardware  | GPU/CPU                                                               |
+| Download link     | [pointnet.pdparams](./pointnet.pdparams)                              |
+| Online operation  | [Notebook](https://aistudio.baidu.com/aistudio/projectdetail/2272519) |
